@@ -89,7 +89,8 @@ sudo nmap -O 10.6.6.23
 | 445  | TCP      | Microsoft-DS |
 
 *This was run to discover the open ports on the target system*
-*View Screenshot:[[OS Detection](./images/OS%20Detection.png)*
+
+*View Screenshot:[OS Detection](./images/OS%20Detection.png)*
 
 ### 4. Aggressive Service Scanning
 **FTP Service Enumeration:**
@@ -109,13 +110,11 @@ To identify the FTP service version and gather additional details using aggressi
 ```bash
 nmap -A -p139,445 10.6.6.23
 ```
-https://screenshots/service_scan.png
 
 *Purpose:
 To enumerate SMB details such as OS info, NetBIOS, and active SMB services.*
 
-*View Screenshot:[SMB Service Enumeration](./images/SMB%20Service%20Enumeration.png)
-*
+*View Screenshot:[SMB Service Enumeration](./images/SMB%20Service%20Enumeration.png)*
 
 ### 5. SMB Share Enumeration
 ```bash
@@ -142,7 +141,9 @@ ip route          # View routing information
 *Purpose:
 To verify network configuration before capturing packets.*
 
-*View Screenshot:[Basic command 2](./images/Basic%20command%202.png)*
+*View Screenshot:[System Configuration Check 1](./images/System%20Configuration%20Check%201.png)*
+
+*View Screenshot:[System Configuration Check 2](./images/System%20Configuration%20Check%202.png)*
 
 Capture Packet Traffic:
 
@@ -168,6 +169,7 @@ wireshark
 ```
 View Screenshot:
 *[Packet Capture with Wireshark](./images/Packet%20Capture%20with%20wireshark.png)*
+
 *[Wireshark Analysis](./images/Wireshark%20Analysis.png)*
 
 
@@ -233,7 +235,8 @@ http://10.6.6.23
 paro2 = _
 paro2.summary()
 ```
-________________________________________
+*View Screenshot: [Sniff on specific network interface](./images/Sniff%20on%20specific%20network%20interface.png)*
+
 ### ICMP Filtered Sniffing
 **1. Capture only ICMP packets**
 ```bash
@@ -253,6 +256,7 @@ paro3.summary()
 ```bash
 paro3[3]
 ```
+*View Screenshot: [ICMP Filtered Sniffing](./images/ICMP%20Filtered%20Sniffing.png)*
 
 
 
