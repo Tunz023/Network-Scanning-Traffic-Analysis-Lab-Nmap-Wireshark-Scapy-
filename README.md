@@ -96,7 +96,7 @@ nmap -p21 -sV -A -T4 10.6.6.23
 **SMB Service Enumeration:**
 
 ```bash
-nmap -p139,445 -sV 10.6.6.23
+nmap -A -p139,445 10.6.6.23
 ```
 https://screenshots/service_scan.png
 
