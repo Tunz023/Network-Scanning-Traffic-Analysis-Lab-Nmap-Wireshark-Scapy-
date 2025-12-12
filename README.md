@@ -1,9 +1,11 @@
 # Network-Scanning-Traffic-Analysis-Lab-Nmap-Wireshark-Scapy-
 This repository documents my Ethical Hacking lab, covering Nmap host discovery, OS detection, and service enumeration; SMB enumeration via Nmap scripts; packet capture and analysis with tcpdump/Wireshark; and interactive packet crafting, sniffing, and filtering using Scapy, all in a controlled lab environment.
 
-Author: Motunrayo Lawal
-Course: Ethical Hacking – ParoCyber Training Network
-Lab Environment: Internal isolated subnet 10.6.6.0/24
+**Author**: Motunrayo Lawal
+
+**Course**: Ethical Hacking – ParoCyber Training Network
+
+**Lab Environment**: Internal isolated subnet 10.6.6.0/24
 
 # Practical Assignment – Nmap & Scapy Lab
 
@@ -259,7 +261,17 @@ paro3[3]
 *View Screenshot: [ICMP Filtered Sniffing](./images/ICMP%20Filtered%20Sniffing.png)*
 
 
+### Conclusion
 
+This lab reinforced my understanding of:
+- How to perform detailed host and service enumeration with Nmap
+- How to detect OS, versions, and SMB shares
+- How to capture live network traffic using tcpdump
+- How to analyze captured packets in Wireshark 
+These skills are essential for penetration testing, incident analysis, and general network security operations.
+
+### Ethical Disclaimer
+**Important**: All activities documented here were performed in a controlled, isolated lab environment with explicit authorization. No scanning, packet capture, or network analysis was conducted on public networks or without permission. This work is strictly educational and demonstrates skills for defensive cybersecurity purposes.
 
 
 
