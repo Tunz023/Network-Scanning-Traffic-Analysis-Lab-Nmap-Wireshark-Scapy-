@@ -44,9 +44,12 @@ Skills covered include:
 ```bash
 nmap -v
 ```
-Result: Nmap version 7.94 
-*This was done to discover the version of the nmap in use.*
-https://screenshots/nmap_version_check.png
+**Result: Nmap version 7.94** 
+*Purpose:
+To verify the installed Nmap version before running any scans.*
+
+*View Screenshot: [Nmap Version Verification](./images/Nmap%20Version%20Verification.png)*
+
 
 ### 2. Host Discovery (Ping Sweep)
 ```bash
@@ -61,8 +64,10 @@ nmap -sn 10.6.6.0/24
 - **10.6.6.23 (Target Host)**
 - 10.6.6.100
 
-This was performed to know the number of host(s) that are available for use.
-View Screenshot (./screenshots/)
+*Purpose:
+This was performed to know the number of host(s) that are available for use.*
+
+*View Screenshot:[Host Discovery](./images/Host%20Discovery.png)*
 
 ### 3. OS Detection & Port Enumeration on Target Host
 ```bash
@@ -84,6 +89,7 @@ sudo nmap -O 10.6.6.23
 | 445  | TCP      | Microsoft-DS |
 
 *This was run to discover the open ports on the target system*
+*View Screenshot:[[OS Detection](./images/OS%20Detection.png)*
 
 ### 4. Aggressive Service Scanning
 **FTP Service Enumeration:**
@@ -91,7 +97,12 @@ sudo nmap -O 10.6.6.23
 ```bash
 nmap -p21 -sV -A -T4 10.6.6.23
 ```
-*This command is used to find...*
+*Purpose:
+To identify the FTP service version and gather additional details using aggressive mode.*
+
+*View Screenshot:[FTP Service Enumeration](./images/FTP%20Service%20Enumeration.png)*
+
+
 
 **SMB Service Enumeration:**
 
@@ -100,16 +111,22 @@ nmap -A -p139,445 10.6.6.23
 ```
 https://screenshots/service_scan.png
 
-*his command is used to find...*
+*Purpose:
+To enumerate SMB details such as OS info, NetBIOS, and active SMB services.*
+
+*View Screenshot:[SMB Service Enumeration](./images/SMB%20Service%20Enumeration.png)
+*
 
 ### 5. SMB Share Enumeration
 ```bash
 nmap --script smb-enum-shares.nse -p445 10.6.6.23
 ```
-Purpose: Identify shared folders, permissions, and anonymous access possibilities.
 *An Anonymous access with Read, Write permission was detected.*
 
-https://screenshots/smb_enumeration.png
+*Purpose: 
+Identify shared folders, permissions, and anonymous access possibilities.*
+
+*View Screenshot:[SMB Share Enumeration](./images/SMB%20Share%20Enumeration.png)*
 
 ## 🔍 WireShark Lab Documentation
 
@@ -122,7 +139,10 @@ ifconfig          # Verify IP address and interface details
 cat /etc/resolv.conf   # Check DNS configuration
 ip route          # View routing information
 ```
-Screenshot
+*Purpose:
+To verify network configuration before capturing packets.*
+
+*View Screenshot:[Basic command 2](./images/Basic%20command%202.png)*
 
 Capture Packet Traffic:
 
@@ -146,8 +166,10 @@ ls motunrayo.pcap
 ```bash
 wireshark
 ```
-Result:
-https://screenshots/packet_capture.png
+View Screenshot:
+*[Packet Capture with Wireshark](./images/Packet%20Capture%20with%20wireshark.png)*
+*[Wireshark Analysis](./images/Wireshark%20Analysis.png)*
+
 
 ## 🔍 Scapy Lab Documentation
 ###  Scapy Packet Manipulation & Analysis
@@ -163,7 +185,7 @@ scapy          # Enter the Scapy interactive environment
 ls()           # List all available protocols
 ls(IP)         # View IP packet header fields
 ```
-https://screenshots/scapy_interface.png
+*View Screenshot:[Scapy Basic Command](./images/Scapy%20Basic%20Command.png)*
 
 ### Sniffing Traffic (Like Wireshark)
 **1. Start a basic packet capture**
@@ -176,6 +198,7 @@ sniff()
 ping google.com
 ping -c 4 google.com   # Ping with 4 packets     
 ```
+*View Screenshot: [Ping google](./images/Ping%20google.png)*
 
 *Stop Sniff & Ping*
 ```bash
@@ -187,6 +210,7 @@ Ctrl + C
 paro = _              # Store captured packets
 paro.summary()        # Display packet summary    
 ```
+*View Screenshot: [Store Captured Packet 1](./images/Store%20Captured%20Packet%201.png)*
 
 
 ### Sniffing on a Specific Network Interface
